@@ -10,7 +10,7 @@
     'category': 'Contact For IT Company',
     'version': '15.0.0.0.0',
     'depends': [
-        "base_automation", 'project'
+        "base_automation", 'project', 'im_livechat'
     ],
     'data': [
         'data/base_automation_data.xml',
