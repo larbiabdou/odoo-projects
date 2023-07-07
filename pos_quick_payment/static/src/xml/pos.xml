@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates id="template" inherit_id="point_of_sale.template">
+    <t t-extend="ActionpadWidget">
+        <t t-jquery=".actionpad" t-operation="replace">
+            <div class="actionpad">
+                <button t-attf-class='button set-customer #{ ( widget.pos.get_client() and widget.pos.get_client().name.length > 10) ? "decentered" : "" }'>
+                    <i class='fa fa-user' role="img" aria-label="Customer" title="Customer"/>
+                    <t t-if="widget.pos.get_client()">
+                        <t t-esc="widget.pos.get_client().name"/>
+                    </t>
+                    <t t-if="!widget.pos.get_client()">
+                        Customer
+                    </t>
+                </button>
+                <t t-if="widget.pos.config.enable_quick_payment == true">
+                    <button class='button pay_quick button_pay_quick'>
+                        <div class='pay-circle'>
+                            <i class='fa fa-chevron-right' role="img" aria-label="Pay" title="Pay"/>
+                        </div>
+                        Quick Payment
+                    </button>
+                    <button class='button pay button_pay'>
+                            <i class='fa fa-money' role="img" aria-label="Pay" title="Pay"/>
+                        <span>Payment</span>
+                    </button>
+                </t>
+                <t t-else="">
+                    <button class='button pay'>
+                        <div class='pay-circle'>
+                            <i class='fa fa-chevron-right' role="img" aria-label="Pay" title="Pay"/>
+                        </div>
+                        Payment
+                    </button>
+                </t>
+
+            </div>
+        </t>
+    </t>
+
+</templates>
