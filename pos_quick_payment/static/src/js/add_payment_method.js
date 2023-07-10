@@ -3,7 +3,6 @@ odoo.define('pos_quick_payment.adding_payment_method', function (require) {
 var screen = require('point_of_sale.screens');
 var PosBaseWidget = require('point_of_sale.BaseWidget');
 var gui = require('point_of_sale.gui');
-var event = require("../lib/event");
 var QuickPaymentScreenWidget = screen.PaymentScreenWidget.extend({
     show: function(){
         this._super();
