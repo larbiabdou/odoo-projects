@@ -20,6 +20,10 @@
                         </div>
                         Quick Payment
                     </button>
+                    <button class='button pay_quick_credit button_pay'>
+                            <i class='fa fa-money' role="img" aria-label="Pay" title="Pay"/>
+                        <span>Credit</span>
+                    </button>
                     <button class='button pay button_pay'>
                             <i class='fa fa-money' role="img" aria-label="Pay" title="Pay"/>
                         <span>Payment</span>
